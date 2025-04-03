@@ -122,7 +122,7 @@ d3.json(queryUrl).then((data) => {
     let div = L.DomUtil.create("div", "info legend");
 
     // Initialize depth intervals and colors for the legend
-    const grades = [0, 1, 2, 3, 4, 5]; 
+    const grades = [1, 2, 3, 4, 5]; 
     const colors = ["red", "orange", "yellow", "light green", "green"]; 
 
     // Loop through our depth intervals to generate a label with a colored square for each interval.
