@@ -14,11 +14,11 @@ let street = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 });
 
 // Create the 'gray' tile layer as a third background of the map
-let grayscale = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.{ext}', {
-    minZoom: 0,
-    maxZoom: 20,
-    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    ext: 'png'
+let grayscale = L.tileLayer('https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png', {
+  minZoom: 0,
+  maxZoom: 20,
+  attribution: 'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
+  ext: 'png'
 });
   
 // Create the map object with center and zoom options.
@@ -123,7 +123,7 @@ d3.json(queryUrl).then((data) => {
 
     // Initialize depth intervals and colors for the legend
     const grades = [0, 1, 2, 3, 4, 5]; 
-    const colors = ["blue", "green", "yellow", "orange", "red"]; 
+    const colors = ["red", "orange", "yellow", "light green", "green"]; 
 
     // Loop through our depth intervals to generate a label with a colored square for each interval.
     for (let i = 0; i < grades.length; i++) {
